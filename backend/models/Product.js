@@ -27,8 +27,8 @@ const Product = sequelize.define('Product', {
         defaultValue: 0
     },
     unitType: {
-        type: DataTypes.ENUM('piece', 'kg'),
-        defaultValue: 'piece'
+        type: DataTypes.STRING,
+        defaultValue: 'adet'
     },
     imageUrl: {
         type: DataTypes.STRING
