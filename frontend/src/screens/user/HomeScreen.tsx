@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { View, Text, StyleSheet, ScrollView, FlatList, Modal, TouchableOpacity, TextInput, Animated, TouchableWithoutFeedback, Platform } from 'react-native';
+import { View, Text, StyleSheet, ScrollView, FlatList, Modal, TouchableOpacity, TextInput, Animated, TouchableWithoutFeedback, Platform, RefreshControl } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { getColors, SPACING, SHADOWS, COLORS } from '../../utils/theme';
 import { useTheme } from '../../context/ThemeContext';
@@ -16,6 +16,7 @@ import { subscribeToCategories } from '../../services/categoryService';
 import { Category } from '../../types';
 
 export default function HomeScreen() {
+    // ... hooks
     const { isDark } = useTheme();
     const COLORS = getColors(isDark);
 
@@ -36,21 +37,21 @@ export default function HomeScreen() {
 
     const { addToCart, items } = useCart();
 
+    // Restore navigation
     const navigation = require('@react-navigation/native').useNavigation();
-    useEffect(() => {
+
+    const [refreshing, setRefreshing] = useState(false);
+
+    const loadData = () => {
         const unsubscribeProd = subscribeToProducts((data) => {
             setProducts(data);
             setIsLoading(false);
         });
         const unsubscribeCat = subscribeToCategories((data) => {
-            // Special Categories
             const allCategory: Category = { id: 'all', name: 'Tümü', icon: 'grid' };
             const bestSellers: Category = { id: 'best_sellers', name: 'En Çok Satanlar', icon: 'trending-up' };
             const campaigns: Category = { id: 'campaigns', name: 'Kampanyalılar', icon: 'percent' };
-
             setCategories([allCategory, bestSellers, campaigns, ...data]);
-
-            // Default to 'all' if nothing selected
             if (!selectedCategory) {
                 setSelectedCategory('all');
             }
@@ -59,6 +60,19 @@ export default function HomeScreen() {
             unsubscribeProd();
             unsubscribeCat();
         };
+    };
+
+    const onRefresh = React.useCallback(() => {
+        setRefreshing(true);
+        // Re-subscribe / Re-fetch
+        loadData();
+        // Simulate a short delay because subscriptions might be fast/cached, just for UX
+        setTimeout(() => setRefreshing(false), 1000);
+    }, []);
+
+    useEffect(() => {
+        const cleanup = loadData();
+        return cleanup;
     }, []);
 
     const showToast = (msg: string) => {
@@ -194,6 +208,9 @@ export default function HomeScreen() {
                 numColumns={3}
                 contentContainerStyle={styles.productList}
                 columnWrapperStyle={styles.columnWrapper}
+                refreshControl={
+                    <RefreshControl refreshing={refreshing} onRefresh={onRefresh} colors={[COLORS.primary]} />
+                }
             />
 
             {/* Advanced Weight Selection Modal */}

@@ -166,6 +166,7 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
     const logout = async () => {
         await AsyncStorage.removeItem('user');
         setUser(null);
+        setViewModeState(null); // Critical: Reset view mode to prevent next user inheriting admin view
     };
 
     const updateUser = async (updates: Partial<User>): Promise<boolean> => {

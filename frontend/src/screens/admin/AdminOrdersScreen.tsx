@@ -30,21 +30,17 @@ export default function AdminOrdersScreen() {
     const normalizeStatus = (status: string) => String(status || '').toLowerCase().trim();
 
     const activeOrders = orders.filter(order =>
-        ['waiting_approval', 'preparing', 'on_the_way'].includes(normalizeStatus(order.status))
+        !['delivered', 'cancelled'].includes(normalizeStatus(order.status))
     );
     const historyOrders = orders.filter(order =>
         ['delivered', 'cancelled'].includes(normalizeStatus(order.status))
     );
 
-    // Fallback: If an order has a weird status, show it in active so it's not lost
-    const otherOrders = orders.filter(order =>
-        !['waiting_approval', 'preparing', 'on_the_way', 'delivered', 'cancelled'].includes(normalizeStatus(order.status))
-    );
+    // activeOrders now contains EVERYTHING that is not finished.
+    // No need for 'otherOrders' fallback anymore.
+    const displayedOrders = activeTab === 'active' ? activeOrders : historyOrders;
 
-    // Merge 'other' into active for visibility
-    const finalActiveOrders = [...activeOrders, ...otherOrders];
 
-    const displayedOrders = activeTab === 'active' ? finalActiveOrders : historyOrders;
 
     const loadOrders = async () => {
         try {
@@ -192,7 +188,7 @@ export default function AdminOrdersScreen() {
                     onPress={() => setActiveTab('active')}
                 >
                     <Text style={[styles.tabText, activeTab === 'active' && styles.activeTabText]}>
-                        İşlemde Olanlar ({finalActiveOrders.length})
+                        İşlemde Olanlar ({activeOrders.length})
                     </Text>
                 </TouchableOpacity>
                 <TouchableOpacity

@@ -1,5 +1,6 @@
 import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
 import { Order } from '../types';
+import { getAllOrders } from '../services/orderService';
 
 interface Sale {
     id: string;
@@ -20,6 +21,7 @@ interface SalesContextType {
     addOrder: (order: Order) => void;
     updateOrderStatus: (orderId: string, status: Order['status']) => void;
     removeOrder: (orderId: string) => void;
+    refreshSalesData: () => Promise<void>;
 }
 
 const SalesContext = createContext<SalesContextType | undefined>(undefined);
@@ -27,6 +29,33 @@ const SalesContext = createContext<SalesContextType | undefined>(undefined);
 export function SalesProvider({ children }: { children: ReactNode }) {
     const [salesHistory, setSalesHistory] = useState<Sale[]>([]);
     const [orders, setOrders] = useState<Order[]>([]);
+
+    useEffect(() => {
+        loadData();
+    }, []);
+
+    const loadData = async () => {
+        try {
+            const allOrders = await getAllOrders();
+            setOrders(allOrders);
+
+            // Reconstruct sales history from delivered orders
+            const history: Sale[] = allOrders
+                .filter(order => order.status === 'delivered')
+                .map(order => ({
+                    id: order.id, // Use order ID as sale ID
+                    orderId: order.id,
+                    amount: order.totalPrice + (order.deliveryFee || 0),
+                    date: order.createdAt,
+                    items: order.items.length
+                }));
+            setSalesHistory(history);
+        } catch (error) {
+            console.error('Failed to load sales data:', error);
+        }
+    };
+
+    // ... (rest of the file)
 
     const today = new Date().toDateString();
     const oneWeekAgo = new Date(Date.now() - 7 * 24 * 60 * 60 * 1000);
@@ -45,9 +74,7 @@ export function SalesProvider({ children }: { children: ReactNode }) {
         .reduce((sum, sale) => sum + sale.amount, 0);
 
     const pendingOrdersCount = orders.filter(o =>
-        o.status === 'waiting_approval' ||
-        o.status === 'preparing' ||
-        o.status === 'on_the_way'
+        o.status !== 'delivered' && o.status !== 'cancelled'
     ).length;
 
     const addSale = (orderId: string, amount: number, items: number) => {
@@ -93,7 +120,8 @@ export function SalesProvider({ children }: { children: ReactNode }) {
             addSale,
             addOrder,
             updateOrderStatus,
-            removeOrder
+            removeOrder,
+            refreshSalesData: loadData
         }}>
             {children}
         </SalesContext.Provider>

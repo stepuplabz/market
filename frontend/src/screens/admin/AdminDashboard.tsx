@@ -1,5 +1,5 @@
-import React from 'react';
-import { View, Text, StyleSheet, TouchableOpacity, ScrollView } from 'react-native';
+import React, { useState, useCallback } from 'react';
+import { View, Text, StyleSheet, TouchableOpacity, ScrollView, RefreshControl } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { COLORS, SPACING, SHADOWS } from '../../utils/theme';
 import { useAuth } from '../../context/AuthContext';
@@ -8,7 +8,16 @@ import { Package, Smartphone, Settings as SettingsIcon, LogOut, TrendingUp, Doll
 
 export default function AdminDashboard({ navigation }: any) {
     const { logout } = useAuth();
-    const { dailySales, pendingOrdersCount } = useSales();
+    const { dailySales, pendingOrdersCount, refreshSalesData } = useSales();
+    const [refreshing, setRefreshing] = useState(false);
+
+    const onRefresh = useCallback(async () => {
+        setRefreshing(true);
+        if (refreshSalesData) {
+            await refreshSalesData();
+        }
+        setRefreshing(false);
+    }, [refreshSalesData]);
 
     const DashboardCard = ({ icon, title, value, color, onPress }: any) => (
         <TouchableOpacity style={[styles.card, { borderLeftColor: color }]} onPress={onPress}>
@@ -29,7 +38,12 @@ export default function AdminDashboard({ navigation }: any) {
                 </TouchableOpacity>
             </View>
 
-            <ScrollView contentContainerStyle={styles.content}>
+            <ScrollView
+                contentContainerStyle={styles.content}
+                refreshControl={
+                    <RefreshControl refreshing={refreshing} onRefresh={onRefresh} colors={[COLORS.primary]} />
+                }
+            >
                 <Text style={styles.sectionTitle}>İstatistikler</Text>
                 <View style={styles.statsGrid}>
                     <DashboardCard
