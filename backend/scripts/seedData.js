@@ -22,102 +22,102 @@ const categories = [
 const products = [
     // Meyve & Sebze (9 items)
     { name: 'Ejder Meyvesi', price: 85.00, category: 'Meyve & Sebze', unit: 'adet', image: 'https://images.unsplash.com/photo-1527325678964-54921661f888?w=500&q=80' },
-    { name: 'Domates', price: 24.90, category: 'Meyve & Sebze', unit: 'kg', image: 'https://images.unsplash.com/photo-1592924357228-91a4daadcfea?w=500&q=80' },
+    { name: 'Domates', price: 24.90, category: 'Meyve & Sebze', unit: 'kg', image: 'https://images.unsplash.com/photo-1594591423315-4b36d0bc694c?w=500&q=80' }, // Better tomato
     { name: 'Salatalık', price: 18.50, category: 'Meyve & Sebze', unit: 'kg', image: 'https://images.unsplash.com/photo-1449300079323-02e209d9d3a6?w=500&q=80' },
     { name: 'Muz', price: 32.90, category: 'Meyve & Sebze', unit: 'kg', image: 'https://images.unsplash.com/photo-1603833665858-e61d17a8622e?w=500&q=80' },
-    { name: 'Elma (Amasya)', price: 22.00, category: 'Meyve & Sebze', unit: 'kg', image: 'https://images.unsplash.com/photo-1560806887-1e4cd0b6cbd6?w=500&q=80' },
+    { name: 'Elma (Amasya)', price: 22.00, category: 'Meyve & Sebze', unit: 'kg', image: 'https://images.unsplash.com/photo-1619546813926-a78fa6372cd2?w=500&q=80' }, // Red apple
     { name: 'Portakal', price: 15.00, category: 'Meyve & Sebze', unit: 'kg', image: 'https://images.unsplash.com/photo-1611080626919-7cf5a9dbab5b?w=500&q=80' },
     { name: 'Avokado', price: 45.00, category: 'Meyve & Sebze', unit: 'adet', image: 'https://images.unsplash.com/photo-1523049673856-428631a9b52c?w=500&q=80' },
     { name: 'Patates', price: 14.50, category: 'Meyve & Sebze', unit: 'kg', image: 'https://images.unsplash.com/photo-1518977676601-b53f82aba655?w=500&q=80' },
-    { name: 'Soğan', price: 12.00, category: 'Meyve & Sebze', unit: 'kg', image: 'https://images.unsplash.com/photo-1618512496248-a07fe83aa829?w=500&q=80' },
+    { name: 'Soğan', price: 12.00, category: 'Meyve & Sebze', unit: 'kg', image: 'https://images.unsplash.com/photo-1587049633312-d628ae50a8ae?w=500&q=80' }, // Onion
 
     // Süt & Kahvaltılık (9 items)
-    { name: 'Süt (1L)', price: 22.50, category: 'Süt & Kahvaltılık', unit: 'adet', image: 'https://images.unsplash.com/photo-1628088062854-d1870b4553da?w=500&q=80' },
-    { name: 'Yumurta (30lu)', price: 95.00, category: 'Süt & Kahvaltılık', unit: 'koli', image: 'https://images.unsplash.com/photo-1516482738386-8260a95098b6?w=500&q=80' },
-    { name: 'Beyaz Peynir', price: 145.00, category: 'Süt & Kahvaltılık', unit: 'kg', image: 'https://images.unsplash.com/photo-1589135233689-d538d6c0b3b4?w=500&q=80' },
-    { name: 'Kaşar Peyniri', price: 210.00, category: 'Süt & Kahvaltılık', unit: 'kg', image: 'https://images.unsplash.com/photo-1624806992066-5d51e0813dd4?w=500&q=80' },
-    { name: 'Zeytin (Siyah)', price: 120.00, category: 'Süt & Kahvaltılık', unit: 'kg', image: 'https://images.unsplash.com/photo-1563630423918-b58f07336ac9?w=500&q=80' },
+    { name: 'Süt (1L)', price: 22.50, category: 'Süt & Kahvaltılık', unit: 'adet', image: 'https://images.unsplash.com/photo-1563636619-e9143da7973b?w=500&q=80' }, // Milk bottle
+    { name: 'Yumurta (30lu)', price: 95.00, category: 'Süt & Kahvaltılık', unit: 'koli', image: 'https://images.unsplash.com/photo-1582722872445-44dc5f7e3c8f?w=500&q=80' }, // Eggs
+    { name: 'Beyaz Peynir', price: 145.00, category: 'Süt & Kahvaltılık', unit: 'kg', image: 'https://images.unsplash.com/photo-1626957341926-98752fc2ba90?w=500&q=80' }, // Feta
+    { name: 'Kaşar Peyniri', price: 210.00, category: 'Süt & Kahvaltılık', unit: 'kg', image: 'https://images.unsplash.com/photo-1618164436241-4473940d1f5c?w=500&q=80' }, // Yellow cheese block
+    { name: 'Zeytin (Siyah)', price: 120.00, category: 'Süt & Kahvaltılık', unit: 'kg', image: 'https://images.unsplash.com/photo-1589301760580-f8da95585bca?w=500&q=80' }, // Olives
     { name: 'Bal', price: 180.00, category: 'Süt & Kahvaltılık', unit: 'kavanoz', image: 'https://images.unsplash.com/photo-1587049352846-4a222e784d38?w=500&q=80' },
-    { name: 'Tereyağı', price: 250.00, category: 'Süt & Kahvaltılık', unit: 'kg', image: 'https://images.unsplash.com/photo-1594968257007-440478051a66?w=500&q=80' },
-    { name: 'Reçel (Çilek)', price: 65.00, category: 'Süt & Kahvaltılık', unit: 'kavanoz', image: 'https://images.unsplash.com/photo-1610452660233-0498db257139?w=500&q=80' },
-    { name: 'Labne', price: 45.00, category: 'Süt & Kahvaltılık', unit: 'adet', image: 'https://images.unsplash.com/photo-1627308595229-7830a5c91f9f?w=500&q=80' },
+    { name: 'Tereyağı', price: 250.00, category: 'Süt & Kahvaltılık', unit: 'kg', image: 'https://images.unsplash.com/photo-1589985270826-4b7bb135bc9d?w=500&q=80' },
+    { name: 'Reçel (Çilek)', price: 65.00, category: 'Süt & Kahvaltılık', unit: 'kavanoz', image: 'https://images.unsplash.com/photo-1621255763959-19ec6eb9bea6?w=500&q=80' }, // Jam jar
+    { name: 'Labne', price: 45.00, category: 'Süt & Kahvaltılık', unit: 'adet', image: 'https://images.unsplash.com/photo-1517436039564-9f26834b6e56?w=500&q=80' },
 
     // Temel Gıda (9 items)
-    { name: 'Ayçiçek Yağı (2L)', price: 85.00, category: 'Temel Gıda', unit: 'adet', image: 'https://images.unsplash.com/photo-1596796929654-20d436c84143?w=500&q=80' },
-    { name: 'Pirinç (1kg)', price: 45.00, category: 'Temel Gıda', unit: 'paket', image: 'https://images.unsplash.com/photo-1536304929831-ee1ca9d44906?w=500&q=80' },
+    { name: 'Ayçiçek Yağı (2L)', price: 85.00, category: 'Temel Gıda', unit: 'adet', image: 'https://images.unsplash.com/photo-1474979266404-7eaacbcdbf41?w=500&q=80' }, // Oil bottle
+    { name: 'Pirinç (1kg)', price: 45.00, category: 'Temel Gıda', unit: 'paket', image: 'https://images.unsplash.com/photo-1586201375761-83865001e31c?w=500&q=80' }, // Rice
     { name: 'Makarna', price: 12.50, category: 'Temel Gıda', unit: 'paket', image: 'https://images.unsplash.com/photo-1551462147-37885acc36f1?w=500&q=80' },
-    { name: 'Bulgur', price: 22.00, category: 'Temel Gıda', unit: 'paket', image: 'https://images.unsplash.com/photo-1563403207797-15215d2a937e?w=500&q=80' },
+    { name: 'Bulgur', price: 22.00, category: 'Temel Gıda', unit: 'paket', image: 'https://images.unsplash.com/photo-1596560548464-f010549b84d7?w=500&q=80' },
     { name: 'Mercimek (Kırmızı)', price: 35.00, category: 'Temel Gıda', unit: 'paket', image: 'https://images.unsplash.com/photo-1515543904379-3d757afe9c6c?w=500&q=80' },
-    { name: 'Un (5kg)', price: 75.00, category: 'Temel Gıda', unit: 'paket', image: 'https://images.unsplash.com/photo-1505253304499-671c55fb57fe?w=500&q=80' },
-    { name: 'Toz Şeker (3kg)', price: 85.00, category: 'Temel Gıda', unit: 'paket', image: 'https://images.unsplash.com/photo-1581441363689-1f3c8c414d20?w=500&q=80' },
+    { name: 'Un (5kg)', price: 75.00, category: 'Temel Gıda', unit: 'paket', image: 'https://images.unsplash.com/photo-1505253149613-112d21d9f6a9?w=500&q=80' }, // Flour
+    { name: 'Toz Şeker (3kg)', price: 85.00, category: 'Temel Gıda', unit: 'paket', image: 'https://images.unsplash.com/photo-1612152605338-2c02cc9643d1?w=500&q=80' }, // Sugar
     { name: 'Salça', price: 45.00, category: 'Temel Gıda', unit: 'kavanoz', image: 'https://images.unsplash.com/photo-1603569283847-aa295f0d016a?w=500&q=80' },
-    { name: 'Kuru Fasulye', price: 40.00, category: 'Temel Gıda', unit: 'paket', image: 'https://images.unsplash.com/photo-1543360485-61e86a9d7045?w=500&q=80' },
+    { name: 'Kuru Fasulye', price: 40.00, category: 'Temel Gıda', unit: 'paket', image: 'https://images.unsplash.com/photo-1567306226416-28f0efdc88ce?w=500&q=80' },
 
     // Atıştırmalık (9 items)
     { name: 'Cips (Klasik)', price: 25.00, category: 'Atıştırmalık', unit: 'paket', image: 'https://images.unsplash.com/photo-1613919113640-1373343a2946?w=500&q=80' },
     { name: 'Cips (Baharatlı)', price: 25.00, category: 'Atıştırmalık', unit: 'paket', image: 'https://images.unsplash.com/photo-1566478989037-eec170784d0b?w=500&q=80' },
-    { name: 'Çikolata', price: 15.00, category: 'Atıştırmalık', unit: 'adet', image: 'https://images.unsplash.com/photo-1511381971708-e160694936e8?w=500&q=80' },
+    { name: 'Çikolata', price: 15.00, category: 'Atıştırmalık', unit: 'adet', image: 'https://images.unsplash.com/photo-1606313564200-e75d5e30476c?w=500&q=80' },
     { name: 'Popcorn', price: 20.00, category: 'Atıştırmalık', unit: 'paket', image: 'https://images.unsplash.com/photo-1578849278619-e73505e9610f?w=500&q=80' },
-    { name: 'Bisküvi', price: 12.00, category: 'Atıştırmalık', unit: 'paket', image: 'https://images.unsplash.com/photo-1590080874088-e56481129bf8?w=500&q=80' },
-    { name: 'Kraker', price: 10.00, category: 'Atıştırmalık', unit: 'paket', image: 'https://images.unsplash.com/photo-1517093725432-a9367132415a?w=500&q=80' },
-    { name: 'Sakız', price: 5.00, category: 'Atıştırmalık', unit: 'paket', image: 'https://plus.unsplash.com/premium_photo-1675237626068-158a17684617?w=500&q=80' },
-    { name: 'Kuruyemiş (Karışık)', price: 65.00, category: 'Atıştırmalık', unit: 'paket', image: 'https://images.unsplash.com/photo-1536591375315-196000ea3678?w=500&q=80' },
-    { name: 'Gofret', price: 8.00, category: 'Atıştırmalık', unit: 'adet', image: 'https://images.unsplash.com/photo-1585651581454-9497dc062a4d?w=500&q=80' },
+    { name: 'Bisküvi', price: 12.00, category: 'Atıştırmalık', unit: 'paket', image: 'https://images.unsplash.com/photo-1558961363-fa8fdf82db35?w=500&q=80' },
+    { name: 'Kraker', price: 10.00, category: 'Atıştırmalık', unit: 'paket', image: 'https://images.unsplash.com/photo-1621257973046-24b89ea6d0a7?w=500&q=80' }, // Cracker
+    { name: 'Sakız', price: 5.00, category: 'Atıştırmalık', unit: 'paket', image: 'https://images.unsplash.com/photo-1590005354167-6a1b40c7c7c7?w=500&q=80' }, // Gum
+    { name: 'Kuruyemiş (Karışık)', price: 65.00, category: 'Atıştırmalık', unit: 'paket', image: 'https://images.unsplash.com/photo-1604543167191-236717462e7d?w=500&q=80' },
+    { name: 'Gofret', price: 8.00, category: 'Atıştırmalık', unit: 'adet', image: 'https://images.unsplash.com/photo-1620917670397-a7ebf9d1b099?w=500&q=80' }, // Waffle/Wafer
 
     // İçecek (9 items)
-    { name: 'Kola (2.5L)', price: 40.00, category: 'İçecek', unit: 'adet', image: 'https://images.unsplash.com/photo-1629203851122-3726ec6a28f7?w=500&q=80' },
+    { name: 'Kola (2.5L)', price: 40.00, category: 'İçecek', unit: 'adet', image: 'https://images.unsplash.com/photo-1622483767028-3f66f32aef97?w=500&q=80' },
     { name: 'Su (5L)', price: 15.00, category: 'İçecek', unit: 'adet', image: 'https://images.unsplash.com/photo-1548839140-29a749e1cf4d?w=500&q=80' },
-    { name: 'Maden Suyu (6lı)', price: 30.00, category: 'İçecek', unit: 'paket', image: 'https://images.unsplash.com/photo-1603598588880-b6e8203c94f5?w=500&q=80' },
+    { name: 'Maden Suyu (6lı)', price: 30.00, category: 'İçecek', unit: 'paket', image: 'https://images.unsplash.com/photo-1603598588880-b6e203c94f5?w=500&q=80' }, // Soda
     { name: 'Meyve Suyu (1L)', price: 28.00, category: 'İçecek', unit: 'adet', image: 'https://images.unsplash.com/photo-1613478223719-2ab802602423?w=500&q=80' },
-    { name: 'Soğuk Çay', price: 20.00, category: 'İçecek', unit: 'adet', image: 'https://images.unsplash.com/photo-1556679343-c7306c1976bc?w=500&q=80' },
+    { name: 'Soğuk Çay', price: 20.00, category: 'İçecek', unit: 'adet', image: 'https://images.unsplash.com/photo-1597818919669-e70a311b70d4?w=500&q=80' },
     { name: 'Enerji İçeceği', price: 35.00, category: 'İçecek', unit: 'adet', image: 'https://images.unsplash.com/photo-1622543925251-d96bdd9116db?w=500&q=80' },
     { name: 'Türk Kahvesi', price: 45.00, category: 'İçecek', unit: 'paket', image: 'https://images.unsplash.com/photo-1559496417-e7f25cb247f3?w=500&q=80' },
     { name: 'Çay (1kg)', price: 135.00, category: 'İçecek', unit: 'paket', image: 'https://images.unsplash.com/photo-1597481499750-3e6b22637e12?w=500&q=80' },
     { name: 'Limonata', price: 25.00, category: 'İçecek', unit: 'adet', image: 'https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?w=500&q=80' },
 
     // Temizlik (9 items)
-    { name: 'Bulaşık Deterjanı', price: 55.00, category: 'Temizlik', unit: 'adet', image: 'https://images.unsplash.com/photo-1584620021665-27a3c3e7216a?w=500&q=80' },
-    { name: 'Çamaşır Suyu', price: 45.00, category: 'Temizlik', unit: 'adet', image: 'https://images.unsplash.com/photo-1585834854930-b3017a0a6598?w=500&q=80' },
-    { name: 'Yüzey Temizleyici', price: 35.00, category: 'Temizlik', unit: 'adet', image: 'https://images.unsplash.com/photo-1626806815617-1fce1da87258?w=500&q=80' },
+    { name: 'Bulaşık Deterjanı', price: 55.00, category: 'Temizlik', unit: 'adet', image: 'https://images.unsplash.com/photo-1585842378081-5c0201ace805?w=500&q=80' }, // Dish soap
+    { name: 'Çamaşır Suyu', price: 45.00, category: 'Temizlik', unit: 'adet', image: 'https://images.unsplash.com/photo-1584620021665-27a3c3e7216a?w=500&q=80' },
+    { name: 'Yüzey Temizleyici', price: 35.00, category: 'Temizlik', unit: 'adet', image: 'https://images.unsplash.com/photo-1626806775907-2a557b293c04?w=500&q=80' },
     { name: 'Kağıt Havlu (6lı)', price: 65.00, category: 'Temizlik', unit: 'paket', image: 'https://images.unsplash.com/photo-1583947582372-88775f92db5e?w=500&q=80' },
-    { name: 'Tuvalet Kağıdı (12li)', price: 95.00, category: 'Temizlik', unit: 'paket', image: 'https://images.unsplash.com/photo-1598255906233-a3d24ca418be?w=500&q=80' },
+    { name: 'Tuvalet Kağıdı (12li)', price: 95.00, category: 'Temizlik', unit: 'paket', image: 'https://images.unsplash.com/photo-1583947581924-860bda6a26df?w=500&q=80' },
     { name: 'Bulaşık Süngeri', price: 15.00, category: 'Temizlik', unit: 'paket', image: 'https://images.unsplash.com/photo-1585670146937-be41838637e6?w=500&q=80' },
-    { name: 'Çöp Torbası', price: 18.00, category: 'Temizlik', unit: 'rulo', image: 'https://images.unsplash.com/photo-1622119777978-654db4010896?w=500&q=80' },
-    { name: 'Oda Spreyi', price: 45.00, category: 'Temizlik', unit: 'adet', image: 'https://images.unsplash.com/photo-1555529733-0e670560f7e1?w=500&q=80' },
-    { name: 'Sıvı Sabun', price: 30.00, category: 'Temizlik', unit: 'adet', image: 'https://images.unsplash.com/photo-1551239911-37d402b80894?w=500&q=80' },
+    { name: 'Çöp Torbası', price: 18.00, category: 'Temizlik', unit: 'rulo', image: 'https://images.unsplash.com/photo-1622119777978-654db4010896?w=500&q=80' }, // Trash bag roll
+    { name: 'Oda Spreyi', price: 45.00, category: 'Temizlik', unit: 'adet', image: 'https://images.unsplash.com/photo-1555529733-0e670560f7e1?w=500&q=80' }, // Spray
+    { name: 'Sıvı Sabun', price: 30.00, category: 'Temizlik', unit: 'adet', image: 'https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=500&q=80' },
 
     // Kişisel Bakım (9 items)
-    { name: 'Şampuan', price: 85.00, category: 'Kişisel Bakım', unit: 'adet', image: 'https://images.unsplash.com/photo-1626784215021-2e39ccf971cd?w=500&q=80' },
+    { name: 'Şampuan', price: 85.00, category: 'Kişisel Bakım', unit: 'adet', image: 'https://images.unsplash.com/photo-1631729371254-42c2892f0e6e?w=500&q=80' }, // Shampoo bottle
     { name: 'Diş Macunu', price: 45.00, category: 'Kişisel Bakım', unit: 'adet', image: 'https://images.unsplash.com/photo-1559599101-f09722fb2945?w=500&q=80' },
-    { name: 'Diş Fırçası', price: 25.00, category: 'Kişisel Bakım', unit: 'adet', image: 'https://images.unsplash.com/photo-1559599238-308793637427?w=500&q=80' },
+    { name: 'Diş Fırçası', price: 25.00, category: 'Kişisel Bakım', unit: 'adet', image: 'https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?w=500&q=80' },
     { name: 'Duş Jeli', price: 65.00, category: 'Kişisel Bakım', unit: 'adet', image: 'https://images.unsplash.com/photo-1556228720-1987bad52b36?w=500&q=80' },
-    { name: 'El Kremi', price: 40.00, category: 'Kişisel Bakım', unit: 'adet', image: 'https://images.unsplash.com/photo-1556228722-dca88862c77d?w=500&q=80' },
-    { name: 'Deodorant', price: 80.00, category: 'Kişisel Bakım', unit: 'adet', image: 'https://images.unsplash.com/photo-1607006886862-2ca4283c748c?w=500&q=80' },
+    { name: 'El Kremi', price: 40.00, category: 'Kişisel Bakım', unit: 'adet', image: 'https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=500&q=80' }, // Cream
+    { name: 'Deodorant', price: 80.00, category: 'Kişisel Bakım', unit: 'adet', image: 'https://images.unsplash.com/photo-1616683693504-3ea7e9ad6fec?w=500&q=80' }, // Deo
     { name: 'Pamuk', price: 15.00, category: 'Kişisel Bakım', unit: 'paket', image: 'https://images.unsplash.com/photo-1584984187010-8b0124e4d41e?w=500&q=80' },
-    { name: 'Tıraş Köpüğü', price: 55.00, category: 'Kişisel Bakım', unit: 'adet', image: 'https://images.unsplash.com/photo-1626078298453-431ea908b981?w=500&q=80' },
-    { name: 'Saç Kremi', price: 90.00, category: 'Kişisel Bakım', unit: 'adet', image: 'https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=500&q=80' },
+    { name: 'Tıraş Köpüğü', price: 55.00, category: 'Kişisel Bakım', unit: 'adet', image: 'https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?w=500&q=80' },
+    { name: 'Saç Kremi', price: 90.00, category: 'Kişisel Bakım', unit: 'adet', image: 'https://images.unsplash.com/photo-1608248597279-f99d160bfbc8?w=500&q=80' },
 
-    // Bebek Bakım (9 items)
-    { name: 'Bebek Bezi (40lı)', price: 250.00, category: 'Bebek Bakım', unit: 'paket', image: 'https://images.unsplash.com/photo-1556228578-8c89b535b738?w=500&q=80' },
-    { name: 'Islak Mendil', price: 25.00, category: 'Bebek Bakım', unit: 'paket', image: 'https://images.unsplash.com/photo-1559837627-de5ea80d1984?w=500&q=80' },
-    { name: 'Bebek Şampuanı', price: 75.00, category: 'Bebek Bakım', unit: 'adet', image: 'https://images.unsplash.com/photo-1594917573434-c760cd9f52f3?w=500&q=80' },
-    { name: 'Bebek Maması', price: 120.00, category: 'Bebek Bakım', unit: 'kavanoz', image: 'https://images.unsplash.com/photo-1584744982491-665216d95f8b?w=500&q=80' },
-    { name: 'Biberon', price: 110.00, category: 'Bebek Bakım', unit: 'adet', image: 'https://images.unsplash.com/photo-1583204936306-2d1ae8f322da?w=500&q=80' },
-    { name: 'Emzik', price: 45.00, category: 'Bebek Bakım', unit: 'adet', image: 'https://images.unsplash.com/photo-1583204781498-8b2b9370cb26?w=500&q=80' },
-    { name: 'Pişik Kremi', price: 55.00, category: 'Bebek Bakım', unit: 'adet', image: 'https://images.unsplash.com/photo-1556228720-1987bad52b36?w=500&q=80' },
-    { name: 'Bebek Yağı', price: 65.00, category: 'Bebek Bakım', unit: 'adet', image: 'https://images.unsplash.com/photo-1582236544865-c76f2deb7c36?w=500&q=80' },
-    { name: 'Bebek Pudrası', price: 40.00, category: 'Bebek Bakım', unit: 'adet', image: 'https://images.unsplash.com/photo-1556228578-8c89b535b738?w=500&q=80' },
+    // Bebek Bakım (FIXED IMAGES)
+    { name: 'Bebek Bezi (40lı)', price: 250.00, category: 'Bebek Bakım', unit: 'paket', image: 'https://images.unsplash.com/photo-1556228578-8c89b535b738?w=500&q=80' }, // Baby feet/diaper area representation
+    { name: 'Islak Mendil', price: 25.00, category: 'Bebek Bakım', unit: 'paket', image: 'https://images.unsplash.com/photo-1559837627-de5ea80d1984?w=500&q=80' }, // Wipes
+    { name: 'Bebek Şampuanı', price: 75.00, category: 'Bebek Bakım', unit: 'adet', image: 'https://images.unsplash.com/photo-1594917573434-c760cd9f52f3?w=500&q=80' }, // Gentle bottle
+    { name: 'Bebek Maması', price: 120.00, category: 'Bebek Bakım', unit: 'kavanoz', image: 'https://images.unsplash.com/photo-1584744982491-665216d95f8b?w=500&q=80' }, // Baby food jar
+    { name: 'Biberon', price: 110.00, category: 'Bebek Bakım', unit: 'adet', image: 'https://images.unsplash.com/photo-1583204936306-2d1ae8f322da?w=500&q=80' }, // Baby bottle
+    { name: 'Emzik', price: 45.00, category: 'Bebek Bakım', unit: 'adet', image: 'https://images.unsplash.com/photo-1583204781498-8b2b9370cb26?w=500&q=80' }, // Pacifier
+    { name: 'Pişik Kremi', price: 55.00, category: 'Bebek Bakım', unit: 'adet', image: 'https://images.unsplash.com/photo-1620916297397-a4a5402a3c6c?w=500&q=80' }, // Cream
+    { name: 'Bebek Yağı', price: 65.00, category: 'Bebek Bakım', unit: 'adet', image: 'https://images.unsplash.com/photo-1608248597279-f99d160bfbc8?w=500&q=80' }, // Oil
+    { name: 'Bebek Pudrası', price: 40.00, category: 'Bebek Bakım', unit: 'adet', image: 'https://images.unsplash.com/photo-1515488042361-25f4682ae2c9?w=500&q=80' }, // Powder
 
     // Teknoloji (9 items)
-    { name: 'USB Kablo', price: 120.00, category: 'Teknoloji', unit: 'adet', image: 'https://images.unsplash.com/photo-1563720223521-82d2f72e3a53?w=500&q=80' },
-    { name: 'Kulaklık', price: 450.00, category: 'Teknoloji', unit: 'adet', image: 'https://images.unsplash.com/photo-1597424216839-5c742c388755?w=500&q=80' },
-    { name: 'Powerbank', price: 350.00, category: 'Teknoloji', unit: 'adet', image: 'https://images.unsplash.com/photo-1579261545620-22c60c87284f?w=500&q=80' },
-    { name: 'Şarj Adaptörü', price: 180.00, category: 'Teknoloji', unit: 'adet', image: 'https://images.unsplash.com/photo-1563720225134-8c0817b18939?w=500&q=80' },
+    { name: 'USB Kablo', price: 120.00, category: 'Teknoloji', unit: 'adet', image: 'https://images.unsplash.com/photo-1610484826967-09c5720778c7?w=500&q=80' },
+    { name: 'Kulaklık', price: 450.00, category: 'Teknoloji', unit: 'adet', image: 'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500&q=80' },
+    { name: 'Powerbank', price: 350.00, category: 'Teknoloji', unit: 'adet', image: 'https://images.unsplash.com/photo-1609091839311-d5365525044c?w=500&q=80' },
+    { name: 'Şarj Adaptörü', price: 180.00, category: 'Teknoloji', unit: 'adet', image: 'https://images.unsplash.com/photo-1583863788434-e58a36330cf0?w=500&q=80' },
     { name: 'Mouse', price: 250.00, category: 'Teknoloji', unit: 'adet', image: 'https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?w=500&q=80' },
     { name: 'Klavye', price: 400.00, category: 'Teknoloji', unit: 'adet', image: 'https://images.unsplash.com/photo-1587829741301-dc798b91add1?w=500&q=80' },
-    { name: 'HDMI Kablo', price: 90.00, category: 'Teknoloji', unit: 'adet', image: 'https://images.unsplash.com/photo-1563720226383-74ac5cb5d706?w=500&q=80' },
-    { name: 'Telefon Kılıfı', price: 100.00, category: 'Teknoloji', unit: 'adet', image: 'https://images.unsplash.com/photo-1610484826967-09c5720778c7?w=500&q=80' },
-    { name: 'Ekran Koruyucu', price: 75.00, category: 'Teknoloji', unit: 'adet', image: 'https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=500&q=80' }
+    { name: 'HDMI Kablo', price: 90.00, category: 'Teknoloji', unit: 'adet', image: 'https://images.unsplash.com/photo-1558230635-c60317e08215?w=500&q=80' },
+    { name: 'Telefon Kılıfı', price: 100.00, category: 'Teknoloji', unit: 'adet', image: 'https://images.unsplash.com/photo-1586105251261-72a756497a11?w=500&q=80' },
+    { name: 'Ekran Koruyucu', price: 75.00, category: 'Teknoloji', unit: 'adet', image: 'https://images.unsplash.com/photo-1605236453806-6ff36851218e?w=500&q=80' }
 ];
 
 const seedData = async () => {
