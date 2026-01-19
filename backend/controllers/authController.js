@@ -12,7 +12,7 @@ exports.register = async (req, res) => {
         // Check if user exists
         const existingUser = await User.findOne({ where: { phone } });
         if (existingUser) {
-            return res.status(400).json({ error: 'User already exists' });
+            return res.status(400).json({ error: 'Bu numara kullanılmaktadır' });
         }
 
         // Hash password
